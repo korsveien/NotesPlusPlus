@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var fullText: String = "This is some editable text..."
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            TextEditor(text: $fullText)
         }
         .padding()
     }
